@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <script src="https://unpkg.com/vanilla-counter"></script>
+    <meta name="description"
+        content="PopCode est un jeu de recherche. Faut retrouver les références de langages de programmation">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>PopCode</title>
+</head>
+
+<body class="w-100">
+    <section id="notresponsive"
+        class="container-fluid justify-content-center align-items-center flex-column position-absolute">
+        <i class="fa-solid fa-desktop"></i>
+        <p class="text-white py-5">Veuillez jouer sur ordinateur s'il vous plaît.</p>
+    </section>
+    <div id="fullloader" class="w-100 justify-content-center align-items-center position-relative position-absolute">
+        <div id="loader">
+            <span>P</span>
+            <span>o</span>
+            <span>p</span>
+            <span>C</span>
+            <span>o</span>
+            <span>d</span>
+            <span>e</span>
+            <span>...</span>
+        </div>
+        <a href="#" class="mentions position-absolute text-white px-5 text-decoration-none">Mentions légales</a>
+        <a href="#" class="politiques position-absolute text-white px-5 text-decoration-none">Politiques de
+            confidentialité</a>
+    </div>
+
+    <section id="accueil" class="container-fluid h-100 d-flex justify-content-center align-items-center flex-column">
+        <img src="assets/img/Logo/logo-popcode2.svg" alt="Logo PopCode" class="w-25">
+        <span data-vanilla-counter data-start-at="0" data-end-at="30" data-time="2500" data-delay="3100"
+            data-format="{}" class="compteur">0</span>
+        <p class="col-2 text-white text-center">RÉFÉRENCES DE <br>LANGAGES DE PROGRAMMATION À RETROUVER</p>
+        <p class="pt-5"><a href="#" id="starting" class="starting text-decoration-none">CLIQUER POUR COMMENCER</a></p>
+        <a href="#" class="mentions position-absolute text-white px-5 text-decoration-none">Mentions légales</a>
+        <a href="#" class="politiques position-absolute text-white px-5 text-decoration-none">Politiques de
+            confidentialité</a>
+    </section>
+    <section id="Jeu">
+        <div>
+            <p>score</p>
+            <span>XXX</span>
+            <span></span>
+        </div>
+        <div>
+            <span></span>
+            <p>zoom</p>
+            <p>
+                
+                LANGAGES TROUVÉS
+            </p>
+        </div>
+        <div>
+
+        </div>
+        <a href="#" class="mentions position-absolute text-white px-5 text-decoration-none">Mentions légales</a>
+        <a href="#" class="politiques position-absolute text-white px-5 text-decoration-none">Politiques de
+            confidentialité</a>
+    </section>
+
+    <script>
+        VanillaCounter();
+    </script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
