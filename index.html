@@ -23,6 +23,7 @@
         <p class="text-white py-5">Veuillez jouer sur ordinateur s'il vous plaît.</p>
     </section>
     <div id="fullloader" class="w-100 justify-content-center align-items-center position-relative position-absolute">
+        <img src="/assets/img/Logo/logo-popcode2.svg" alt="Logo" class="position-absolute w-50">
         <div id="loader">
             <span>P</span>
             <span>o</span>
@@ -33,40 +34,47 @@
             <span>e</span>
             <span>...</span>
         </div>
-        <a href="#" class="mentions position-absolute text-white px-5 text-decoration-none">Mentions légales</a>
-        <a href="#" class="politiques position-absolute text-white px-5 text-decoration-none">Politiques de
+        <a href="#" class="mentions position-absolute text-white px-5 text-decoration-none pb-2">Mentions légales</a>
+        <a href="#" class="politiques position-absolute text-white px-5 text-decoration-none pb-2">Politiques de
             confidentialité</a>
     </div>
 
-    <section id="accueil" class="container-fluid h-100 d-flex justify-content-center align-items-center flex-column">
+    <section id="accueil" class="container-fluid h-100 justify-content-center align-items-center flex-column">
         <img src="assets/img/Logo/logo-popcode2.svg" alt="Logo PopCode" class="w-25">
         <span data-vanilla-counter data-start-at="0" data-end-at="30" data-time="2500" data-delay="3100"
             data-format="{}" class="compteur">0</span>
-        <p class="col-2 text-white text-center">RÉFÉRENCES DE <br>LANGAGES DE PROGRAMMATION À RETROUVER</p>
+        <p class="text text-white text-center">RÉFÉRENCES DE <br>LANGAGES DE PROGRAMMATION À RETROUVER</p>
         <p class="pt-5"><a href="#" id="starting" class="starting text-decoration-none">CLIQUER POUR COMMENCER</a></p>
-        <a href="#" class="mentions position-absolute text-white px-5 text-decoration-none">Mentions légales</a>
-        <a href="#" class="politiques position-absolute text-white px-5 text-decoration-none">Politiques de
+        <a href="#" class="mentions position-absolute text-white px-5 text-decoration-none pb-2">Mentions légales</a>
+        <a href="#" class="politiques position-absolute text-white px-5 text-decoration-none pb-2">Politiques de
             confidentialité</a>
     </section>
-    <section id="Jeu">
-        <div>
-            <p>score</p>
-            <span>XXX</span>
-            <span></span>
+    <section id="jeu" class="container-fluid w-100 align-items-center justify-content-center m-0 p-0 text-white position-relative">
+        <img src="assets/img/Jeu/chambre.jpg" alt="chargement" class="position-absolute">
+        <img src="assets/img/Jeu/Logo.svg" alt="Logo" class="position-absolute">
+        <div class="score m-0 p-0 position-absolute d-flex justify-content-center align-items-center">
+            <p class="pe-3">SCORE</p>
+            <div class="d-flex justify-content-center align-items-center flex-column">
+                <span class="fs-18">08 / 30</span>
+                <span class="fs-18">XXX</span>
+            </div>
         </div>
-        <div>
+    <div id="zoom" class="position-absolute d-flex align-items-center justify-content-center flex-column pb-2">
+            <p class="zoomblue">zoom</p>
+            <p class="fs-12">+</p>
             <span></span>
-            <p>zoom</p>
-            <p>
-                
-                LANGAGES TROUVÉS
-            </p>
-        </div>
-        <div>
+            <p class="fs-12">_</p>
+        </div
+        >
+        <button id="langage" class="position-absolute d-flex justify-content-center align-items-center p-1 mb-4">
+            <img src="assets/img/Jeu/search.svg" alt="search">
+            <p class="m-0 ps-2">LANGAGES TROUVÉS</p>
+        </button>
+        
 
         </div>
-        <a href="#" class="mentions position-absolute text-white px-5 text-decoration-none">Mentions légales</a>
-        <a href="#" class="politiques position-absolute text-white px-5 text-decoration-none">Politiques de
+        <a href="#" class="mentions position-absolute text-white pe-5 text-decoration-none pb-2">Mentions légales</a>
+        <a href="#" class="politiques position-absolute text-white pe-5 text-decoration-none pb-2">Politiques de
             confidentialité</a>
     </section>
 
@@ -75,6 +83,7 @@
     </script>
     <script src="assets/js/app.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
 </body>
 
 </html>
