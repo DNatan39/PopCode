@@ -30,9 +30,9 @@
 }
 body {
     height: 100vh;
-    background-image: url(/assets/img/Commencement/Chargement.png);
+    /* background-image: url(/assets/img/Commencement/Chargement.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
 }
 #notresponsive{
     display: none !important;
@@ -203,9 +203,10 @@ body {
 
 /* Jeu */
 #jeu{
-    display: none;
+    /* display: none; */
     height: 100%;
     font-size: 8px;
+    overflow: hidden;
 }
 #jeu img:nth-child(1){
     width: 100%;
@@ -257,12 +258,6 @@ body {
     top: 15px;
     left: 0;
     border-bottom: 1px solid #fff;
-}
-.score span:nth-child(2)::first-letter{
-    color: #0AEFF7;
-}
-.score span:nth-child(2){
-    color: #ffffff30;
 }
 #zoom{
     bottom: 0;
