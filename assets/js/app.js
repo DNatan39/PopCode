@@ -17,3 +17,15 @@ starting.addEventListener('click', function(){
         jeu.style.display = "flex";
     }, 1000);
 })
+
+let scale = 1;
+const el = document.querySelector('#geeks');
+el.onwheel = zoom;
+
+// Modal
+var buttontest = document.querySelector('#buttontest');
+var modal = document.querySelector('#modal');
+// remplacer buttontest par jeu ou le logo correspondant.
+buttontest.addEventListener('click', function(){
+    modal.classList.toggle("modalflex");
+})

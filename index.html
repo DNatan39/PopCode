@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/png" href="assets/img/Logo/logo-popcode2.svg"/>
     <title>PopCode</title>
 </head>
 
@@ -23,7 +24,6 @@
         <p class="text-white py-5">Veuillez jouer sur ordinateur s'il vous plaît.</p>
     </section>
     <div id="fullloader" class="w-100 justify-content-center align-items-center position-relative position-absolute">
-        <img src="/assets/img/Logo/logo-popcode2.svg" alt="Logo" class="position-absolute w-50">
         <div id="loader">
             <span>P</span>
             <span>o</span>
@@ -41,22 +41,22 @@
 
     <section id="accueil" class="container-fluid h-100 justify-content-center align-items-center flex-column">
         <img src="assets/img/Logo/logo-popcode2.svg" alt="Logo PopCode" class="w-25">
-        <span data-vanilla-counter data-start-at="0" data-end-at="30" data-time="2500" data-delay="3100"
+        <span data-vanilla-counter data-start-at="0" data-end-at="27" data-time="2500" data-delay="3100"
             data-format="{}" class="compteur">0</span>
-        <p class="text text-white text-center">RÉFÉRENCES DE <br>LANGAGES DE PROGRAMMATION À RETROUVER</p>
+        <p class="text text-white text-center">RÉFÉRENCES DE<br>LANGAGES DE PROGRAMMATION<br>À RETROUVER</p>
         <p class="pt-5"><a href="#" id="starting" class="starting text-decoration-none">CLIQUER POUR COMMENCER</a></p>
         <a href="#" class="mentions position-absolute text-white px-5 text-decoration-none pb-2">Mentions légales</a>
         <a href="#" class="politiques position-absolute text-white px-5 text-decoration-none pb-2">Politiques de
             confidentialité</a>
     </section>
     <section id="jeu" class="container-fluid w-100 align-items-center justify-content-center m-0 p-0 text-white position-relative">
-        <img src="assets/img/Jeu/chambre.jpg" alt="chargement" class="position-absolute">
+        <img src="assets/img/Jeu/chambre.jpg" alt="fond du jeu" id="geeks" class="position-absolute">
         <img src="assets/img/Jeu/Logo.svg" alt="Logo" class="position-absolute">
         <div class="score m-0 p-0 position-absolute d-flex justify-content-center align-items-center">
             <p class="pe-3">SCORE</p>
             <div class="d-flex justify-content-center align-items-center flex-column">
-                <span class="fs-18">08 / 30</span>
-                <span class="fs-18">XXX</span>
+                <span class="fs-18">08 / 27</span>
+                <span class="fs-18">X X X</span>
             </div>
         </div>
     <div id="zoom" class="position-absolute d-flex align-items-center justify-content-center flex-column pb-2">
@@ -77,6 +77,39 @@
         <a href="#" class="politiques position-absolute text-white pe-5 text-decoration-none pb-2">Politiques de
             confidentialité</a>
     </section>
+
+    <section id="modal" class="position-absolute justify-content-center align-items-center text-white p-5">
+        <div id="contenumodal" class="container-fluid d-flex justify-content-center align-items-center p-5 mt-3">
+            <div class="d-flex justify-content-center align-items-center flex-column">
+                <h2 class="fs-80 pb-2 ps-5">JAVASCRIPT</h2>
+                <img src="assets/img/modal/js.jpg" alt="Logo JavaScript" class="pb-4 pe-5">
+            </div>
+            <div class="container-fluid pt-5 mt-5">
+                <p class="col-8 fs-13">JavaScript est un langage de programmation de scripts principalement employé dans les pages web interactives et à ce titre est une partie essentielle des applications web. Avec les langages HTML et CSS, JavaScript est au cœur des langages utilisés par les développeurs web3. Une grande majorité des sites web l'utilisent4, et la majorité des navigateurs web disposent d'un moteur JavaScript5 pour l'interpréter. </p>
+                <p class="col-8 fs-13">
+                    JavaScript est aussi employé pour les serveurs Web6 avec l'utilisation (par exemple) de Node.js7 ou de Deno8.
+                </p>
+                <p class="col-8 fs-13">
+                    JavaScript a été créé en 1995 par Brendan Eich et intégré au navigateur web Netscape Navigator 2.0. L'implémentation concurrente de JavaScript par Microsoft dans Internet Explorer jusqu'à sa version 9 se nommait JScript, tandis que celle d'Adobe Systems se nommait ActionScript. JavaScript a été standardisé sous le nom d'ECMAScript en juin 1997 par Ecma International dans le standard ECMA-262. La version en vigueur de ce standard depuis juin 2022 est la 13e édition.
+                </p>
+                
+                <p class="col-8 fs-13">
+                    C'est un langage orienté objet à prototype : les bases du langage et ses principales interfaces sont fournies par des objets. Cependant, à la différence d'un langage orienté objets, les objets de base ne sont pas des instances de classes. En outre, les fonctions sont des objets de première classe. Le langage supporte le paradigme objet, impératif et fonctionnel.
+                </p>
+                
+                <p class="col-8 fs-13">est le langage possédant le plus large écosystème grâce à son gestionnaire de dépendances npm, avec environ 500 000 paquets en août 2017.</p>
+            </div>
+            <!-- <div id="fermeturefenetre" class="w-50 d-flex justify-content-center align-items-center position-absolute">
+                <p class="fs-8 m-0 px-2">FERMER AUTOMATIQUEMENT CETTE FENETRE</p>
+                <input type="checkbox" id="fermetureauto" checked>
+            </div> -->
+            <label id="fermeturefenetre" class="w-50 d-flex justify-content-center align-items-center position-absolute fs-8">FERMER AUTOMATIQUEMENT CETTE FENETRE
+                <input type="checkbox" checked="checked">
+                <span class="checkmark"></span>
+            </label>
+        </div>
+    </section>
+    <button id="buttontest" class="position-absolute px-5 py-2">Modal</button>
 
     <script>
         VanillaCounter();

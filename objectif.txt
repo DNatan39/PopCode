@@ -1,0 +1,2 @@
+Faire le modal pour la description des logos, qu'il soit centré (comme dans figma).
+ensuite faire le modal pour entrer les noms des logos.
