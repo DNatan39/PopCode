@@ -63,23 +63,24 @@
                 </div>
             </div>
         </div>
-    <div id="zoom" class="position-absolute d-flex align-items-center justify-content-center flex-column pb-2">
+        <div id="zoom" class="position-absolute d-flex align-items-center justify-content-center flex-column pb-2">
             <p class="zoomblue">zoom</p>
             <p class="fs-12">+</p>
             <span></span>
             <p class="fs-12">_</p>
-        </div
-        >
-        <button id="langage" class="position-absolute d-flex justify-content-center align-items-center p-1 mb-4">
+        </div>
+        <button id="langage" class="position-absolute d-flex justify-content-center align-items-center p-1">
             <img src="assets/img/Jeu/search.svg" alt="search">
             <p class="m-0 ps-2">LANGAGES TROUVÉS</p>
         </button>
-        
 
-        </div>
         <a href="#" class="mentions position-absolute text-white pe-5 text-decoration-none pb-2">Mentions légales</a>
         <a href="#" class="politiques position-absolute text-white pe-5 text-decoration-none pb-2">Politiques de
             confidentialité</a>
+        <div id="inputcenter" class="container-fluid position-absolute justify-content-center align-items-center flex-column">
+            <div id="screeninput" class="fs-80 text-white"></div>
+            <p class="fs-13 text-white">TAPE UN NOM DE LANGAGE DE PROGRAMMATION</p>
+        </div>
     </section>
 
     <section id="modal" class="position-absolute justify-content-center align-items-center text-white p-5">
@@ -89,6 +90,7 @@
                 <img src="assets/img/modal/js.jpg" alt="Logo JavaScript" class="pb-4 pe-5">
             </div>
             <div class="container-fluid pt-5 mt-5">
+                <div class="modalclose position-absolute"></div>
                 <p class="col-8 fs-13">JavaScript est un langage de programmation de scripts principalement employé dans les pages web interactives et à ce titre est une partie essentielle des applications web. Avec les langages HTML et CSS, JavaScript est au cœur des langages utilisés par les développeurs web3. Une grande majorité des sites web l'utilisent4, et la majorité des navigateurs web disposent d'un moteur JavaScript5 pour l'interpréter. </p>
                 <p class="col-8 fs-13">
                     JavaScript est aussi employé pour les serveurs Web6 avec l'utilisation (par exemple) de Node.js7 ou de Deno8.
@@ -103,20 +105,18 @@
                 
                 <p class="col-8 fs-13">est le langage possédant le plus large écosystème grâce à son gestionnaire de dépendances npm, avec environ 500 000 paquets en août 2017.</p>
             </div>
-            <!-- <div id="fermeturefenetre" class="w-50 d-flex justify-content-center align-items-center position-absolute">
-                <p class="fs-8 m-0 px-2">FERMER AUTOMATIQUEMENT CETTE FENETRE</p>
-                <input type="checkbox" id="fermetureauto" checked>
-            </div> -->
             <label id="fermeturefenetre" class="w-50 d-flex justify-content-center align-items-center position-absolute fs-8">FERMER AUTOMATIQUEMENT CETTE FENETRE
                 <input type="checkbox" checked="checked">
                 <span class="checkmark"></span>
             </label>
         </div>
     </section>
-    <button id="buttontest" class="position-absolute px-5 py-2">Modal</button>
 
     <script>
         VanillaCounter();
+    </script>
+    <script src="assets/js/wheelzoom.js">
+        wheelzoom(document.querySelector('#geeks'));
     </script>
     <script src="assets/js/app.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>

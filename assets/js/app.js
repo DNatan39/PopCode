@@ -1,10 +1,14 @@
-var loader = document.querySelector("#fullloader");
-var jeu = document.querySelector("#jeu");
-var accueil = document.querySelector("#accueil");
-var starting = document.querySelector("#starting");
+var loader = document.querySelector('#fullloader');
+var jeu = document.querySelector('#jeu');
+var accueil = document.querySelector('#accueil');
+var starting = document.querySelector('#starting');
 var buttontest = document.querySelector('#buttontest');
 var modal = document.querySelector('#modal');
 var score = document.querySelector('.score span:nth-child(2)');
+var modalclose = document.querySelector('.modalclose');
+var fermeturefenetre = document.querySelector('#fermeturefenetre');
+var inputcenter = document.querySelector('#inputcenter');
+var screeninput = document.querySelector('#screeninput');
 
 // window.onload = setTimeout(test, 3000);
 // function test(){
@@ -19,14 +23,25 @@ var score = document.querySelector('.score span:nth-child(2)');
 //     }, 1000);
 // })
 
-// Zoom
+
 
 // Modal
-
 // remplacer buttontest par jeu ou le logo correspondant.
-buttontest.addEventListener('click', function(){
-    modal.classList.toggle("modalflex");
+
+// jeu.addEventListener('click', function(){
+//     modal.classList.toggle("modalflex");
+// })
+// modalclose.addEventListener('click', function(){
+//     modal.classList.toggle("modalflex");
+// })
+
+// modal de saisi
+
+window.addEventListener("keydown", function (event) {
+    inputcenter.style.display= "flex";
+    screeninput.innerHTML += event.key.toUpperCase();
 })
+
 
 // Score
 
