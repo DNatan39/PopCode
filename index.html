@@ -50,7 +50,7 @@
             confidentialité</a>
     </section> -->
     <section id="jeu" class="container-fluid w-100 align-items-center justify-content-center m-0 p-0 text-white position-relative">
-        <img src="assets/img/Jeu/chambre.jpg" alt="fond du jeu" id="geeks" class="position-absolute">
+        <img src="assets/img/Jeu/chambre.jpg" alt="fond du jeu" id="geeks" class="zoom">
         <img src="assets/img/Jeu/Logo.svg" alt="Logo" class="position-absolute">
         <div class="score m-0 p-0 position-absolute d-flex justify-content-center align-items-center">
             <p class="pe-3">SCORE</p>
@@ -70,7 +70,7 @@
             <p class="fs-12">_</p>
         </div>
         <button id="langage" class="position-absolute d-flex justify-content-center align-items-center p-1">
-            <img src="assets/img/Jeu/search.svg" alt="search">
+            <img src="assets/img/Jeu/search.svg" alt="search" class="loupesvg">
             <p class="m-0 ps-2">LANGAGES TROUVÉS</p>
         </button>
 
@@ -78,11 +78,11 @@
         <a href="#" class="politiques position-absolute text-white pe-5 text-decoration-none pb-2">Politiques de
             confidentialité</a>
         <div id="inputcenter" class="container-fluid position-absolute justify-content-center align-items-center flex-column">
-            <div id="screeninput" class="fs-80 text-white"></div>
+            <div id="screeninput" class="fs-80 text-white" type="text"></div>
             <p class="fs-13 text-white">TAPE UN NOM DE LANGAGE DE PROGRAMMATION</p>
         </div>
     </section>
-
+    
     <section id="modal" class="position-absolute justify-content-center align-items-center text-white p-5">
         <div id="contenumodal" class="container-fluid d-flex justify-content-center align-items-center p-5 mt-3">
             <div class="d-flex justify-content-center align-items-center flex-column">
@@ -105,7 +105,7 @@
                 
                 <p class="col-8 fs-13">est le langage possédant le plus large écosystème grâce à son gestionnaire de dépendances npm, avec environ 500 000 paquets en août 2017.</p>
             </div>
-            <label id="fermeturefenetre" class="w-50 d-flex justify-content-center align-items-center position-absolute fs-8">FERMER AUTOMATIQUEMENT CETTE FENETRE
+            <label id="fermeturefenetre" class="w-50 justify-content-center align-items-center position-absolute fs-8">FERMER AUTOMATIQUEMENT CETTE FENETRE
                 <input type="checkbox" checked="checked">
                 <span class="checkmark"></span>
             </label>
@@ -115,9 +115,10 @@
     <script>
         VanillaCounter();
     </script>
-    <script src="assets/js/wheelzoom.js">
-        wheelzoom(document.querySelector('#geeks'));
-    </script>
+    <script src="assets/js/wheelzoom.js"></script>
+        <script>
+              wheelzoom(document.querySelector('img.zoom'));
+        </script>
     <script src="assets/js/app.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>

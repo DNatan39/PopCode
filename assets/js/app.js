@@ -9,6 +9,9 @@ var modalclose = document.querySelector('.modalclose');
 var fermeturefenetre = document.querySelector('#fermeturefenetre');
 var inputcenter = document.querySelector('#inputcenter');
 var screeninput = document.querySelector('#screeninput');
+var fermeturefenetre = document.querySelector('#fermeturefenetre');
+
+var langue = ['JAVASCRIPT']
 
 // window.onload = setTimeout(test, 3000);
 // function test(){
@@ -22,26 +25,6 @@ var screeninput = document.querySelector('#screeninput');
 //         jeu.style.display = "flex";
 //     }, 1000);
 // })
-
-
-
-// Modal
-// remplacer buttontest par jeu ou le logo correspondant.
-
-// jeu.addEventListener('click', function(){
-//     modal.classList.toggle("modalflex");
-// })
-// modalclose.addEventListener('click', function(){
-//     modal.classList.toggle("modalflex");
-// })
-
-// modal de saisi
-
-window.addEventListener("keydown", function (event) {
-    inputcenter.style.display= "flex";
-    screeninput.innerHTML += event.key.toUpperCase();
-})
-
 
 // Score
 
@@ -70,3 +53,64 @@ jeu.addEventListener('click', function () {
     }
 })
 
+// Modal
+// remplacer buttontest par jeu ou le logo correspondant.
+
+// window.addEventListener("keydown", function(){
+//     modal.classList.toggle("modalflex");
+// })
+// modalclose.addEventListener('click', function(){
+//     modal.classList.toggle("modalflex");
+// })
+// fermeturefenetre.addEventListener('click', function(){
+//     setTimeout(() => {
+//         modal.classList.remove("modalflex");
+//     }, 2000);
+// })
+
+// modal de saisi
+window.addEventListener("keydown", function (e) {
+    console.log(e);
+    if (
+        e.key === "a" ||
+        e.key === "b" ||
+        e.key === "c" ||
+        e.key === "d" ||
+        e.key === "e" ||
+        e.key === "f" ||
+        e.key === "g" ||
+        e.key === "h" ||
+        e.key === "i" ||
+        e.key === "j" ||
+        e.key === "k" ||
+        e.key === "l" ||
+        e.key === "m" ||
+        e.key === "n" ||
+        e.key === "o" ||
+        e.key === "p" ||
+        e.key === "q" ||
+        e.key === "r" ||
+        e.key === "s" ||
+        e.key === "t" ||
+        e.key === "u" ||
+        e.key === "v" ||
+        e.key === "w" ||
+        e.key === "x" ||
+        e.key === "y" ||
+        e.key === "z" ||
+        e.key === "+" ||
+        e.key === "-" ||
+        e.key === "#" ||
+        e.key === " "
+    ) {
+        inputcenter.style.display = "flex";
+        screeninput.innerHTML += e.key.toUpperCase();
+    }
+    if (e.key === 'Backspace'){
+        screeninput.textContent = screeninput.textContent.slice(e, -1);
+    }
+    if (e.key === 'Escape'){
+        inputcenter.style.display = "none";
+        screeninput.textContent = "";
+    }
+})
