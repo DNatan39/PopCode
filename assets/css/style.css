@@ -410,6 +410,45 @@ body {
     overflow: hidden;
 }
 
+/* modal de language trouvée */
+.modaldelangue{
+    width: 30%;
+    height: 100%;
+    background: #00000080;
+    display: none;
+    position: absolute;
+    top: 0;
+}
+.modalflexlang{
+    display: flex;
+    animation: flex 0.5s alternate;
+}
+@keyframes flex {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
+.modalnonelang{
+    display: none !important;  
+}
+#close{
+    font-size: 30px;
+    color: #fff;
+    top: 50px;
+    right: 50px;
+}
+
+
+
+
+
+
+
+
 
 @media screen and (max-width: 1024px) {
     #notresponsive {

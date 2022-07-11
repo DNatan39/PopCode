@@ -10,8 +10,11 @@ var fermeturefenetre = document.querySelector('#fermeturefenetre');
 var inputcenter = document.querySelector('#inputcenter');
 var screeninput = document.querySelector('#screeninput');
 var fermeturefenetre = document.querySelector('#fermeturefenetre');
+var langage = document.querySelector('#langage');
 
-var langue = ['JAVASCRIPT']
+var alllangues = ['JAVASCRIPT', 'HTML', 'CSS', 'SQL', 'PYTHON', 'JAVA', 'BASH', 'POWERSHELL', 'C#', 'PHP', 'C++', 'TYPESCRIPT', 'C', 'RUBY', 'GO', 'ASSEMBLY', 'SWIFT', 'KOTLIN', 'R', 'VBA', 'OBJECTIVE-C', 'SCALA', 'RUST', 'DART', 'ELIXIR', 'CLOJURE', 'WEBASSEMBLY'];
+
+var alllanguesvide = [];
 
 // window.onload = setTimeout(test, 3000);
 // function test(){
@@ -54,6 +57,7 @@ jeu.addEventListener('click', function () {
 })
 
 // Modal
+
 // remplacer buttontest par jeu ou le logo correspondant.
 
 // window.addEventListener("keydown", function(){
@@ -68,7 +72,22 @@ jeu.addEventListener('click', function () {
 //     }, 2000);
 // })
 
+// Modal de langage trouvée
+
+var modaldelangue = document.querySelector('.modaldelangue');
+var close = document.querySelector("#close");
+
+langage.addEventListener('click', function(){
+    modaldelangue.classList.add('modalflexlang');
+})
+close.addEventListener('click', function(){
+    modaldelangue.classList.remove('modalflexlang');
+})
+
+
+
 // modal de saisi
+
 window.addEventListener("keydown", function (e) {
     console.log(e);
     if (
