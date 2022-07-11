@@ -441,7 +441,14 @@ body {
     top: 50px;
     right: 50px;
 }
-
+.modalerror{
+    width: 100%;
+    height: 100%;
+    z-index: 500000;
+    background: #00000050;
+    top: 0;
+    display: none;
+}
 
 
 

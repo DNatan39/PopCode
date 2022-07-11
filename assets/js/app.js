@@ -11,10 +11,8 @@ var inputcenter = document.querySelector('#inputcenter');
 var screeninput = document.querySelector('#screeninput');
 var fermeturefenetre = document.querySelector('#fermeturefenetre');
 var langage = document.querySelector('#langage');
+var modalerror = document.querySelector('.modalerror');
 
-var alllangues = ['JAVASCRIPT', 'HTML', 'CSS', 'SQL', 'PYTHON', 'JAVA', 'BASH', 'POWERSHELL', 'C#', 'PHP', 'C++', 'TYPESCRIPT', 'C', 'RUBY', 'GO', 'ASSEMBLY', 'SWIFT', 'KOTLIN', 'R', 'VBA', 'OBJECTIVE-C', 'SCALA', 'RUST', 'DART', 'ELIXIR', 'CLOJURE', 'WEBASSEMBLY'];
-
-var alllanguesvide = [];
 
 // window.onload = setTimeout(test, 3000);
 // function test(){
@@ -28,33 +26,6 @@ var alllanguesvide = [];
 //         jeu.style.display = "flex";
 //     }, 1000);
 // })
-
-// Score
-
-let error1 = false
-let error2 = false
-let error3 = false
-
-jeu.addEventListener('click', function () {
-    if (error1 == false) {
-        document.querySelector('.error1').style = 'opacity: 1; color: #0AEFF7;'
-        error1 = true
-        console.log('erreur1=' + error1)
-        return
-    }
-    if (error1 == true & error2 == false) {
-        document.querySelector('.error2').style = 'opacity: 1; color: #0AEFF7;'
-        error2 = true
-        console.log('erreur2=' + error2)
-        return
-    }
-    if (error2 == true & error3 == false) {
-        document.querySelector('.error3').style = 'opacity: 1; color: #0AEFF7;'
-        error3 = true
-        console.log('erreur3=' + error3)
-        return
-    }
-})
 
 // Modal
 
@@ -72,24 +43,36 @@ jeu.addEventListener('click', function () {
 //     }, 2000);
 // })
 
+
+
+var alllangues = ['JavaScript', 'HTML', 'CSS', 'SQL', 'Python', 'Java', 'Bash', 'PowerShell', 'C#', 'PHP', 'C++', 'TypeScript', 'C', 'Ruby', 'GO', 'Assembly', 'Swift', 'Kotlin', 'R', 'VBA', 'Objective-C', 'Scala', 'Rust', 'Dart', 'Elixir', 'Clojure', 'WebAssembly'];
+
+let alllanguesMaj = alllangues.map((j) => {
+    return j.toUpperCase();
+});
+console.log(alllanguesMaj)
+
+var alllanguesvide = [];
+
 // Modal de langage trouvée
 
 var modaldelangue = document.querySelector('.modaldelangue');
 var close = document.querySelector("#close");
 
-langage.addEventListener('click', function(){
+langage.addEventListener('click', function () {
     modaldelangue.classList.add('modalflexlang');
 })
-close.addEventListener('click', function(){
+close.addEventListener('click', function () {
     modaldelangue.classList.remove('modalflexlang');
 })
 
 
-
 // modal de saisi
+let error1 = false
+let error2 = false
+let error3 = false
 
 window.addEventListener("keydown", function (e) {
-    console.log(e);
     if (
         e.key === "a" ||
         e.key === "b" ||
@@ -125,11 +108,38 @@ window.addEventListener("keydown", function (e) {
         inputcenter.style.display = "flex";
         screeninput.innerHTML += e.key.toUpperCase();
     }
-    if (e.key === 'Backspace'){
+    if (e.key === 'Backspace') {
         screeninput.textContent = screeninput.textContent.slice(e, -1);
     }
-    if (e.key === 'Escape'){
+    if (e.key === 'Escape') {
         inputcenter.style.display = "none";
         screeninput.textContent = "";
     }
+    if (e.key === 'Enter' && alllanguesMaj.includes(screeninput.innerHTML)) {
+        if(alllanguesMaj == true){
+            
+        }
+    }
+    if (e.key === 'Enter' && !alllanguesMaj.includes(screeninput.innerHTML)) {
+        console.log('erreur');
+        
+        if (error1 == false) {
+            document.querySelector('.error1').style = 'opacity: 1; color: #0AEFF7;'
+            error1 = true
+            return
+        }
+        if (error1 == true & error2 == false) {
+            document.querySelector('.error2').style = 'opacity: 1; color: #0AEFF7;'
+            error2 = true
+            return
+        }
+        if (error2 == true & error3 == false) {
+            document.querySelector('.error3').style = 'opacity: 1; color: #0AEFF7;'
+            error3 = true
+            modalerror.style.display = 'flex !important';
+            return
+        }
+    }
+
+
 })
