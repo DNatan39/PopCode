@@ -136,10 +136,8 @@ window.addEventListener("keydown", function (e) {
         if (error2 == true & error3 == false) {
             document.querySelector('.error3').style = 'opacity: 1; color: #0AEFF7;'
             error3 = true
-            modalerror.style.display = 'flex !important';
+            modalerror.style.display = 'flex';
             return
         }
     }
-
-
 })

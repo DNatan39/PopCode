@@ -445,11 +445,19 @@ body {
     width: 100%;
     height: 100%;
     z-index: 500000;
-    background: #00000050;
     top: 0;
     display: none;
+    animation: pusherror 0.5s alternate;
 }
-
+@keyframes pusherror {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
 
 
 
