@@ -50,7 +50,9 @@
             confidentialité</a>
     </section> -->
     <section id="jeu" class="container-fluid w-100 align-items-center justify-content-center m-0 p-0 text-white position-relative">
-        <img src="assets/img/Jeu/chambre.jpg" alt="fond du jeu" id="geeks" class="zoom">
+        <div class="zoom">
+            <img src="assets/img/Jeu/chambre.jpg" alt="fond du jeu">
+        </div>
         <img src="assets/img/Jeu/Logo.svg" alt="Logo" class="position-absolute">
         <div class="score m-0 p-0 position-absolute d-flex justify-content-center align-items-center">
             <p class="pe-3">SCORE</p>
@@ -66,7 +68,8 @@
         <div id="zoom" class="position-absolute d-flex align-items-center justify-content-center flex-column pb-2">
             <p class="zoomblue">zoom</p>
             <p class="fs-12">+</p>
-            <span></span>
+            <span class="zoombarrewhite"></span>
+            <span class="zoombarreblue"></span>
             <p class="fs-12">_</p>
         </div>
         <button id="langage" class="position-absolute d-flex justify-content-center align-items-center p-1">
@@ -123,12 +126,11 @@
     <script>
         VanillaCounter();
     </script>
-    <script src="assets/js/wheelzoom.js"></script>
-        <script>
-              wheelzoom(document.querySelector('img.zoom'));
-        </script>
+    <script src="assets/js/zoom-by-ironex.min.js"></script>
+    <script>
+        zoom();
+    </script>
     <script src="assets/js/app.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
 </body>
 

@@ -27,6 +27,18 @@ var modalerror = document.querySelector('.modalerror');
 //     }, 1000);
 // })
 
+// Zoom
+var zoom = document.querySelector('.zoom img');
+var zoombarreblue = document.querySelector('.zoombarreblue');
+
+zoom.addEventListener('wheel', function(){
+    for (n = 0; n < zoom.dataset.scale; n++){
+        zoombarreblue.style.height = `${n}0%`;
+    }
+})
+
+
+
 // Modal
 
 // remplacer buttontest par jeu ou le logo correspondant.
@@ -50,7 +62,6 @@ var alllangues = ['JavaScript', 'HTML', 'CSS', 'SQL', 'Python', 'Java', 'Bash', 
 let alllanguesMaj = alllangues.map((j) => {
     return j.toUpperCase();
 });
-console.log(alllanguesMaj)
 
 var alllanguesvide = [];
 
@@ -121,8 +132,11 @@ window.addEventListener("keydown", function (e) {
         }
     }
     if (e.key === 'Enter' && !alllanguesMaj.includes(screeninput.innerHTML)) {
-        console.log('erreur');
-        
+        if (e.key === 'Enter' && screeninput.textContent === ""){
+            screeninput.textContent === "";
+            inputcenter.style.display = "none";
+            return
+        }
         if (error1 == false) {
             document.querySelector('.error1').style = 'opacity: 1; color: #0AEFF7;'
             error1 = true
@@ -141,3 +155,5 @@ window.addEventListener("keydown", function (e) {
         }
     }
 })
+
+
