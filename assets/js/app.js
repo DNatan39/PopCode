@@ -13,6 +13,9 @@ var fermeturefenetre = document.querySelector('#fermeturefenetre');
 var langage = document.querySelector('#langage');
 var modalerror = document.querySelector('.modalerror');
 var numscore = document.querySelector('.numscore');
+var modaldelangue = document.querySelector('.modaldelangue');
+var modaldelanguep = document.querySelector('.modaldelangue p');
+var close = document.querySelector("#close");
 let y = 0;
 
 
@@ -69,9 +72,6 @@ var alllanguesvide = [];
 
 // Modal de langage trouvée
 
-var modaldelangue = document.querySelector('.modaldelangue');
-var close = document.querySelector("#close");
-
 langage.addEventListener('click', function () {
     modaldelangue.classList.add('modalflexlang');
 })
@@ -79,6 +79,7 @@ close.addEventListener('click', function () {
     modaldelangue.classList.remove('modalflexlang');
 })
 
+// JSON modal 
 
 // modal de saisi
 let error1 = false
@@ -142,6 +143,7 @@ window.addEventListener("keydown", function (e) {
             inputcenter.style.display = "none";
             screeninput.textContent = "";
         }, 250);
+            
     }
     if (e.key === 'Enter' && screeninput.textContent === ""){
         inputcenter.style.display = "none";

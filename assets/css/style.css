@@ -274,13 +274,12 @@ body {
     font-size: 10px;
 }
 .zoombarrewhite {
-    width: 1px;
+    width: 1.5px;
     height: 124px;
-    background-color: #D9D9D9;
     background-color: #D9D9D9;
 }
 .zoombarreblue  {
-    width: 1px;
+    width: 1.5px;
     max-height: 124px;
     height: 1%;
     background-color: #0AEFF7;
@@ -355,14 +354,12 @@ body {
     display: flex !important;
 }
 #fermeturefenetre {
-    bottom: 20%;
-    left: 40%;
-    display: flex;
-}
-#fermeturefenetre {
     position: relative;
     padding-left: 35px;
     margin-bottom: 12px;
+    bottom: 10%;
+    left: 40%;
+    display: flex;
     cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
