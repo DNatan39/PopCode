@@ -12,6 +12,8 @@ var screeninput = document.querySelector('#screeninput');
 var fermeturefenetre = document.querySelector('#fermeturefenetre');
 var langage = document.querySelector('#langage');
 var modalerror = document.querySelector('.modalerror');
+var numscore = document.querySelector('.numscore');
+let y = 0;
 
 
 // window.onload = setTimeout(test, 3000);
@@ -119,6 +121,8 @@ window.addEventListener("keydown", function (e) {
         inputcenter.style.display = "flex";
         screeninput.innerHTML += e.key.toUpperCase();
     }
+
+
     if (e.key === 'Backspace') {
         screeninput.textContent = screeninput.textContent.slice(e, -1);
     }
@@ -127,29 +131,49 @@ window.addEventListener("keydown", function (e) {
         screeninput.textContent = "";
     }
     if (e.key === 'Enter' && alllanguesMaj.includes(screeninput.innerHTML)) {
-        if(alllanguesMaj == true){
-            
+        y++;
+        numscore.innerHTML = y;
+        console.log(y);
+        if (y === 27) {
+            document.querySelector('.modalwin').innerHTML;
+            document.querySelector('.modalwin').style.display = 'flex';
         }
+        setTimeout(() => {
+            inputcenter.style.display = "none";
+            screeninput.textContent = "";
+        }, 250);
+    }
+    if (e.key === 'Enter' && screeninput.textContent === ""){
+        inputcenter.style.display = "none";
+        return
     }
     if (e.key === 'Enter' && !alllanguesMaj.includes(screeninput.innerHTML)) {
-        if (e.key === 'Enter' && screeninput.textContent === ""){
-            screeninput.textContent === "";
-            inputcenter.style.display = "none";
-            return
-        }
+
         if (error1 == false) {
             document.querySelector('.error1').style = 'opacity: 1; color: #0AEFF7;'
             error1 = true
+             setTimeout(() => {
+                inputcenter.style.display = "none";
+                screeninput.textContent = "";   
+            }, 250);
             return
         }
         if (error1 == true & error2 == false) {
             document.querySelector('.error2').style = 'opacity: 1; color: #0AEFF7;'
             error2 = true
+             setTimeout(() => {
+                inputcenter.style.display = "none";
+                screeninput.textContent = "";   
+            }, 250);
             return
         }
         if (error2 == true & error3 == false) {
             document.querySelector('.error3').style = 'opacity: 1; color: #0AEFF7;'
             error3 = true
+             setTimeout(() => {
+                inputcenter.style.display = "none";
+                screeninput.textContent = "";   
+            }, 250);
             modalerror.style.display = 'flex';
             return
         }
