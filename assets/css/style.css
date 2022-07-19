@@ -34,9 +34,9 @@
 }
 body {
     height: 100vh;
-    /* background-image: url(../img/Commencement/Chargement.png);
+    background-image: url(../img/Commencement/Chargement.png);
     background-repeat: no-repeat;
-    background-size: cover; */
+    background-size: cover;
 }
 #notresponsive {
     display: none !important;
@@ -209,7 +209,7 @@ body {
 
 /* Jeu */
 #jeu {
-    /* display: none; */
+    display: none;
     height: 100%;
     font-size: 8px;
     overflow: hidden;
@@ -313,7 +313,33 @@ body {
 #langage .loupesvg{
     z-index: 100 !important;
 }
+.startinggame{
+    position: absolute;
+    bottom: 25%;
+    left: 35%;
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+.none{
+    display: none !important;
+}
+.startinggame{
+    color: #FFAAFF;
+    animation: clignotegame .8s infinite;
+}
+@keyframes clignotegame {
+    0% {
+        opacity: 1;
+    }
 
+    40% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
 /* Modal + bouton test */
 .modalclose {
     position: absolute;
@@ -352,6 +378,10 @@ body {
 }
 .modalflex {
     display: flex !important;
+}
+.lightblue{
+    opacity: 1;
+    color: #0AEFF7;
 }
 #fermeturefenetre {
     position: relative;

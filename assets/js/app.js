@@ -16,21 +16,22 @@ var numscore = document.querySelector('.numscore');
 var modaldelangue = document.querySelector('.modaldelangue');
 var modaldelanguep = document.querySelector('.modaldelangue p');
 var close = document.querySelector("#close");
+var startinggame = document.querySelector("#startinggame");
 let y = 0;
 
 
-// window.onload = setTimeout(test, 3000);
-// function test(){
-//     loader.style.display = "none";
-//     accueil.style.display = "flex";
-// };
-// starting.addEventListener('click', function(){
-//     accueil.classList.add("transcueil");
-//     setTimeout(() => {
-//         accueil.style.display = "none";
-//         jeu.style.display = "flex";
-//     }, 1000);
-// })
+window.onload = setTimeout(test, 3000);
+function test(){
+    loader.style.display = "none";
+    accueil.style.display = "flex";
+};
+starting.addEventListener('click', function(){
+    accueil.classList.add("transcueil");
+    setTimeout(() => {
+        accueil.style.display = "none";
+        jeu.style.display = "flex";
+    }, 1000);
+})
 
 // Zoom
 var zoom = document.querySelector('.zoom img');
@@ -86,6 +87,8 @@ let error1 = false
 let error2 = false
 let error3 = false
 
+
+
 window.addEventListener("keydown", function (e) {
     if (
         e.key === "a" ||
@@ -134,7 +137,6 @@ window.addEventListener("keydown", function (e) {
     if (e.key === 'Enter' && alllanguesMaj.includes(screeninput.innerHTML)) {
         y++;
         numscore.innerHTML = y;
-        console.log(y);
         if (y === 27) {
             document.querySelector('.modalwin').innerHTML;
             document.querySelector('.modalwin').style.display = 'flex';
@@ -152,7 +154,7 @@ window.addEventListener("keydown", function (e) {
     if (e.key === 'Enter' && !alllanguesMaj.includes(screeninput.innerHTML)) {
 
         if (error1 == false) {
-            document.querySelector('.error1').style = 'opacity: 1; color: #0AEFF7;'
+            document.querySelector('.error1').classList.add('lightblue');
             error1 = true
              setTimeout(() => {
                 inputcenter.style.display = "none";
@@ -161,7 +163,7 @@ window.addEventListener("keydown", function (e) {
             return
         }
         if (error1 == true & error2 == false) {
-            document.querySelector('.error2').style = 'opacity: 1; color: #0AEFF7;'
+            document.querySelector('.error2').classList.add('lightblue');
             error2 = true
              setTimeout(() => {
                 inputcenter.style.display = "none";
@@ -170,7 +172,7 @@ window.addEventListener("keydown", function (e) {
             return
         }
         if (error2 == true & error3 == false) {
-            document.querySelector('.error3').style = 'opacity: 1; color: #0AEFF7;'
+            document.querySelector('.error3').classList.add('lightblue');
             error3 = true
              setTimeout(() => {
                 inputcenter.style.display = "none";
@@ -179,7 +181,19 @@ window.addEventListener("keydown", function (e) {
             modalerror.style.display = 'flex';
             return
         }
+        
     }
 })
 
+error = [document.querySelector('.error1'),document.querySelector('.error2'),document.querySelector('.error3')];
+
+startinggame.addEventListener('click', function () {
+    score = 0;
+    numscore.textContent = score;
+    for (let n = 0; n < error.length; n++) {
+       error = error[n].classList.remove('lightblue');
+    }
+    modalerror.classList.add('none');
+    modalwin.classList.add('none');
+});
 
