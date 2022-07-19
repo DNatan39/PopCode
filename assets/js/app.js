@@ -83,6 +83,9 @@ close.addEventListener('click', function () {
 // JSON modal 
 
 // modal de saisi
+startinggame.addEventListener('click', function () {
+    window.location.reload();
+});
 let error1 = false
 let error2 = false
 let error3 = false
@@ -184,16 +187,4 @@ window.addEventListener("keydown", function (e) {
         
     }
 })
-
-error = [document.querySelector('.error1'),document.querySelector('.error2'),document.querySelector('.error3')];
-
-startinggame.addEventListener('click', function () {
-    score = 0;
-    numscore.textContent = score;
-    for (let n = 0; n < error.length; n++) {
-       error = error[n].classList.remove('lightblue');
-    }
-    modalerror.classList.add('none');
-    modalwin.classList.add('none');
-});
 

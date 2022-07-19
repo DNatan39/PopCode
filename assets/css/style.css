@@ -472,6 +472,12 @@ body {
     top: 50px;
     right: 50px;
 }
+.modalerror{
+    display: flex;
+}
+.modalwin{
+    display: flex;
+}
 .modalerror h2{
     font-size: 150px;
     color: #00ffff;
