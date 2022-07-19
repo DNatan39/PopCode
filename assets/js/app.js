@@ -21,18 +21,18 @@ var startinggameend = document.querySelector("#startinggameend");
 let y = 0;
 
 
-window.onload = setTimeout(test, 3000);
-function test(){
-    loader.style.display = "none";
-    accueil.style.display = "flex";
-};
-starting.addEventListener('click', function(){
-    accueil.classList.add("transcueil");
-    setTimeout(() => {
-        accueil.style.display = "none";
-        jeu.style.display = "flex";
-    }, 1000);
-})
+// window.onload = setTimeout(test, 3000);
+// function test(){
+//     loader.style.display = "none";
+//     accueil.style.display = "flex";
+// };
+// starting.addEventListener('click', function(){
+//     accueil.classList.add("transcueil");
+//     setTimeout(() => {
+//         accueil.style.display = "none";
+//         jeu.style.display = "flex";
+//     }, 1000);
+// })
 
 // Zoom
 var zoom = document.querySelector('.zoom img');

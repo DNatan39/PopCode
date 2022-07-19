@@ -32,11 +32,12 @@
 .fs-80 {
     font-size: 80px;
 }
+
 body {
     height: 100vh;
-    background-image: url(../img/Commencement/Chargement.png);
+    /* background-image: url(../img/Commencement/Chargement.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
 }
 #notresponsive {
     display: none !important;
@@ -209,7 +210,7 @@ body {
 
 /* Jeu */
 #jeu {
-    display: none;
+    /* display: none; */
     height: 100%;
     font-size: 8px;
     overflow: hidden;
