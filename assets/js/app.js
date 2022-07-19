@@ -16,7 +16,8 @@ var numscore = document.querySelector('.numscore');
 var modaldelangue = document.querySelector('.modaldelangue');
 var modaldelanguep = document.querySelector('.modaldelangue p');
 var close = document.querySelector("#close");
-var startinggame = document.querySelector("#startinggame");
+var startinggamewin = document.querySelector("#startinggamewin");
+var startinggameend = document.querySelector("#startinggameend");
 let y = 0;
 
 
@@ -83,7 +84,10 @@ close.addEventListener('click', function () {
 // JSON modal 
 
 // modal de saisi
-startinggame.addEventListener('click', function () {
+startinggameend.addEventListener('click', function () {
+    window.location.reload();
+});
+startinggamewin.addEventListener('click', function () {
     window.location.reload();
 });
 let error1 = false

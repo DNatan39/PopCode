@@ -1,2 +1,6 @@
-Faire le modal pour la description des logos, qu'il soit centré (comme dans figma).
-ensuite faire le modal pour entrer les noms des logos.
+CE QUI ME RESTE A FAIRE !
+
+
+- Bloquer le score et éviter la répitition de bonne ou mauvaise réponse (Jouer avec les tableaux)
+- Faire un LocalStorage
+- Faire la modal(Object JSON) pour faire apparaître les différentes explications des languages.
