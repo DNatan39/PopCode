@@ -152,7 +152,15 @@ window.addEventListener("keydown", function (e) {
             inputcenter.style.display = "none";
             screeninput.textContent = "";
         }, 250);
-            
+        alllanguesMaj.innerHTML = alllanguesvide;
+        let langpositions = alllanguesMaj.indexOf(alllanguesMaj);
+        alllanguesMaj.splice(langpositions, 1);
+        alllanguesvide.push(screeninput.innerHTML);
+        
+        modaldelanguep.innerHTML = alllanguesvide.join("<br>");
+        alllanguesvide = new Set();
+
+        console.log(alllanguesvide);
     }
     if (e.key === 'Enter' && screeninput.textContent === ""){
         inputcenter.style.display = "none";
