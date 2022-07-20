@@ -142,6 +142,22 @@ window.addEventListener("keydown", function (e) {
         screeninput.textContent = "";
     }
     if (e.key === 'Enter' && alllanguesMaj.includes(screeninput.innerHTML)) {
+        alllanguesMaj.innerHTML = alllanguesvide;
+        let langpositions = alllanguesMaj.indexOf(alllanguesMaj);
+        alllanguesvide.push(screeninput.innerHTML);
+        unique = [...new Set(alllanguesvide)];
+        modaldelanguep.innerHTML = unique.join("<br>");
+    
+        console.log(alllanguesMaj);
+        if (alllanguesvide.length !== unique.length){
+            alllanguesvide.pop();
+            screeninput.innerHTML = "Tu te répètes";
+            setTimeout(() => {
+                inputcenter.style.display = "none"
+                screeninput.innerHTML = "";
+            }, 800);
+            return
+        }
         y++;
         numscore.innerHTML = y;
         if (y === 27) {
@@ -152,15 +168,6 @@ window.addEventListener("keydown", function (e) {
             inputcenter.style.display = "none";
             screeninput.textContent = "";
         }, 250);
-        alllanguesMaj.innerHTML = alllanguesvide;
-        let langpositions = alllanguesMaj.indexOf(alllanguesMaj);
-        alllanguesMaj.splice(langpositions, 1);
-        alllanguesvide.push(screeninput.innerHTML);
-        
-        modaldelanguep.innerHTML = alllanguesvide.join("<br>");
-        alllanguesvide = new Set();
-
-        console.log(alllanguesvide);
     }
     if (e.key === 'Enter' && screeninput.textContent === ""){
         inputcenter.style.display = "none";
