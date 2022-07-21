@@ -205,5 +205,13 @@ window.addEventListener("keydown", function (e) {
         }
         
     }
-})
+});
+const myRequest = new Request('assets/json/languages.json');
 
+fetch(myRequest)
+.then(response => response.json())
+.then(date => {
+    for (const product of data.products) {
+        let 
+    }
+})
