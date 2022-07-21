@@ -50,11 +50,11 @@ zoom.addEventListener('wheel', function(){
 
 // remplacer buttontest par jeu ou le logo correspondant.
 
-// window.addEventListener("keydown", function(){
-//     modal.classList.toggle("modalflex");
-// })
+window.addEventListener("click", function(){
+    modal.classList.toggle("modalflex");
+})
 // modalclose.addEventListener('click', function(){
-//     modal.classList.toggle("modalflex");
+//     modal.classList.remove("modalflex");
 // })
 // fermeturefenetre.addEventListener('click', function(){
 //     setTimeout(() => {
@@ -80,8 +80,6 @@ langage.addEventListener('click', function () {
 close.addEventListener('click', function () {
     modaldelangue.classList.remove('modalflexlang');
 })
-
-// JSON modal 
 
 // modal de saisi
 startinggameend.addEventListener('click', function () {
@@ -148,7 +146,6 @@ window.addEventListener("keydown", function (e) {
         unique = [...new Set(alllanguesvide)];
         modaldelanguep.innerHTML = unique.join("<br>");
     
-        console.log(alllanguesMaj);
         if (alllanguesvide.length !== unique.length){
             alllanguesvide.pop();
             screeninput.innerHTML = "Tu te répètes";
@@ -210,8 +207,15 @@ const myRequest = new Request('assets/json/languages.json');
 
 fetch(myRequest)
 .then(response => response.json())
-.then(date => {
-    for (const product of data.products) {
-        let 
+.then(data => {
+    let toShow = "";
+    for (let x = 0; x < data.length; x++) {
+        toShow +=
+        "<div class='d-flex justify-content-center align-items-center flex-column'><h2 class='fs-80 pb-2 ps-5'>"+data[x].name+"</h2><img src='"+data[x].picture+"' alt='Logo' class='pb-4 pe-5'></div><div class='container-fluid pt-5 mt-5'><div class='modalclose position-absolute'></div><p class='col-8 fs-13'>"+data[x].description+"</p> <label id='fermeturefenetre' class='w-50 justify-content-center align-items-center position-absolute fs-8'>FERMER AUTOMATIQUEMENT CETTE FENETRE<input type='checkbox' checked='checked'><span class='checkmark'></span></label></div>"
+
+        document.querySelector('#contenumodal').innerHTML =toShow;
+        break
     }
 })
+// NATAN
+// +data[x].name+ : Voici ce que tu dois mettre et remplace le .name par .picture ou .description en fonction de ce que tu veux afficher dans tes divs ou p ou img.
