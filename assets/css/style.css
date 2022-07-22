@@ -26,6 +26,9 @@
 .fs-18 {
     font-size: 18px;
 }
+.fs-20{
+    font-size: 20px;
+}
 .fs-35 {
     font-size: 35px;
 }
@@ -35,9 +38,9 @@
 
 body {
     height: 100vh;
-    /* background-image: url(../img/Commencement/Chargement.png);
+    background-image: url(../img/Commencement/Chargement.png);
     background-repeat: no-repeat;
-    background-size: cover; */
+    background-size: cover;
 }
 #notresponsive {
     display: none !important;
@@ -210,7 +213,7 @@ body {
 
 /* Jeu */
 #jeu {
-    /* display: none; */
+    display: none;
     height: 100%;
     font-size: 8px;
     overflow: hidden;
@@ -312,7 +315,7 @@ body {
     color: #fff;
 }
 #langage .loupesvg{
-    z-index: 100 !important;
+    z-index: 1 !important;
 }
 .startinggame{
     position: absolute;
@@ -442,7 +445,56 @@ body {
     height: 15%;
     overflow: hidden;
 }
-
+/* mention legale */
+#mentionlegale{
+    width: 50%;
+    min-height: 100vh;
+    display: none;
+    background: #00000080;
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow: auto !important;
+    z-index: 10000000;
+}
+#mentionlegale div{
+    width: 80%;
+    height: 90vh;
+    overflow-y: scroll !important;
+}
+#mentionlegale h2{
+    font-size: 25px;
+    text-decoration: underline;
+    color: #fff;
+}
+#mentionlegale p{
+    width: 50%;
+    font-size: 14px;
+    color: #fff;
+}
+#mentionlegale p a{
+    color: #FF00D6;
+}
+#mentionlegale ul li{
+    font-size: 14px;
+    color: #fff;
+}
+.openMent{
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.closeMent{
+    display: none;
+}
+#closemention{
+    font-size: 30px;
+    color: #fff;
+    top: 50px;
+    left: 50px;
+    z-index: 1000000;
+}
 /* modal de language trouvée */
 .modaldelangue{
     width: 40%;
