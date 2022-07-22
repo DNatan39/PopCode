@@ -1,6 +1,6 @@
 CE QUI ME RESTE A FAIRE !
 
 
-- Bloquer le score et éviter la répitition de bonne ou mauvaise réponse (Jouer avec les tableaux)
-- Faire la modal(Object JSON) pour faire apparaître les différentes explications des languages.
-- Faire un LocalStorage
+- Finir le JSON.
+- Faire les mentions légales.
+- Faire une page ou écrire en-dessous le but du jeu.
