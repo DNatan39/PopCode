@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/png" href="assets/img/Logo/logo-popcode2.svg"/>
     <title>PopCode</title>
 </head>
 
@@ -22,6 +23,8 @@
         <i class="fa-solid fa-desktop"></i>
         <p class="text-white py-5">Veuillez jouer sur ordinateur s'il vous plaît.</p>
     </section>
+    <div id="mentionlegale"></div>
+    <a href="#" class="mentions position-absolute text-white text-decoration-none pb-2">Mentions légales</a>
     <div id="fullloader" class="w-100 justify-content-center align-items-center position-relative position-absolute">
         <div id="loader">
             <span>P</span>
@@ -33,48 +36,91 @@
             <span>e</span>
             <span>...</span>
         </div>
-        <a href="#" class="mentions position-absolute text-white px-5 text-decoration-none">Mentions légales</a>
-        <a href="#" class="politiques position-absolute text-white px-5 text-decoration-none">Politiques de
-            confidentialité</a>
     </div>
 
-    <section id="accueil" class="container-fluid h-100 d-flex justify-content-center align-items-center flex-column">
+    <section id="accueil" class="container-fluid h-100 justify-content-center align-items-center flex-column">
         <img src="assets/img/Logo/logo-popcode2.svg" alt="Logo PopCode" class="w-25">
-        <span data-vanilla-counter data-start-at="0" data-end-at="30" data-time="2500" data-delay="3100"
+        <span data-vanilla-counter data-start-at="0" data-end-at="27" data-time="2500" data-delay="3100"
             data-format="{}" class="compteur">0</span>
-        <p class="col-2 text-white text-center">RÉFÉRENCES DE <br>LANGAGES DE PROGRAMMATION À RETROUVER</p>
+        <p class="text text-white text-center">RÉFÉRENCES DE<br>LANGAGES DE PROGRAMMATION<br>À RETROUVER</p>
         <p class="pt-5"><a href="#" id="starting" class="starting text-decoration-none">CLIQUER POUR COMMENCER</a></p>
-        <a href="#" class="mentions position-absolute text-white px-5 text-decoration-none">Mentions légales</a>
-        <a href="#" class="politiques position-absolute text-white px-5 text-decoration-none">Politiques de
-            confidentialité</a>
     </section>
-    <section id="Jeu">
-        <div>
-            <p>score</p>
-            <span>XXX</span>
-            <span></span>
-        </div>
-        <div>
-            <span></span>
-            <p>zoom</p>
-            <p>
-                
-                LANGAGES TROUVÉS
-            </p>
-        </div>
-        <div>
 
+    <section id="jeu" class="container-fluid w-100 align-items-center justify-content-center m-0 p-0 text-white position-relative">
+        <h2 class="regle fs-18 position-absolute">Le but du jeu est de trouvé les 27 langages de programmation</h2>
+        <div class="zoom">
+            <img src="assets/img/Jeu/chambre.jpg" alt="fond du jeu">
         </div>
-        <a href="#" class="mentions position-absolute text-white px-5 text-decoration-none">Mentions légales</a>
-        <a href="#" class="politiques position-absolute text-white px-5 text-decoration-none">Politiques de
-            confidentialité</a>
+        <img src="assets/img/Jeu/Logo.svg" alt="Logo" class="position-absolute">
+        <div class="score m-0 p-0 position-absolute d-flex justify-content-center align-items-center">
+            <p class="pe-3">SCORE</p>
+            <div class="d-flex justify-content-center align-items-center flex-column">
+                <span class="fs-18"><span class="numscore">0</span> / 27</span>
+                <div class="d-flex">
+                    <span class="error1 fs-18 px-1">X</span>
+                    <span class="error2 fs-18 px-1">X</span>
+                    <span class="error3 fs-18 px-1">X</span>
+                </div>
+            </div>
+        </div>
+        <div id="zoom" class="position-absolute d-flex align-items-center justify-content-center flex-column pb-2">
+            <p class="zoomblue">zoom</p>
+            <p class="fs-12">+</p>
+            <span class="zoombarrewhite"></span>
+            <span class="zoombarreblue"></span>
+            <p class="fs-12">_</p>
+        </div>
+        <button id="langage" class="position-absolute d-flex justify-content-center align-items-center p-1">
+            <img src="assets/img/Jeu/search.svg" alt="search" class="loupesvg">
+            <p class="m-0 ps-2">LANGAGES TROUVÉS</p>
+        </button>
+
+        <div id="inputcenter" class="container-fluid position-absolute justify-content-center align-items-center flex-column">
+            <div id="screeninput" class="fs-80 text-white" type="text"></div>
+            <p class="fs-13 text-white">TAPE UN NOM DE LANGAGE DE PROGRAMMATION</p>
+        </div>
+        <div class="modalerror justify-content-center align-items-center position-absolute">
+            <img class="position-absolute" src="assets/img/Jeu/chambre.jpg" alt="coucou">
+            <h2><span>G</span>AME <span>O</span>VER</h2>
+            <p id="startinggameend" class="startinggame text-decoration-none">CLIQUER POUR RECOMMENCER</p>
+        </div>
+        <div class="modalwin justify-content-center align-items-center position-absolute">
+            <img class="position-absolute" src="assets/img/Jeu/chambre.jpg" alt="coucou">
+            <h2><span>V</span>OUS <span>A</span>VEZ <span>G</span>AGNÉ !</h2>
+            <p id="startinggamewin" class="startinggame text-decoration-none">CLIQUER POUR RECOMMENCER</p>
+        </div>
     </section>
+
+    <section id="modal" class="position-absolute justify-content-center align-items-center text-white p-5">
+        <div id="contenumodal" class="container-fluid d-flex justify-content-center align-items-center p-5 mt-3">
+            <div class='d-flex justify-content-center align-items-center flex-column'>
+                <h2 id="titredelanguage" class='fs-80 pb-2'></h2>
+                <img id="imagelanguage" src='' alt=''>
+            </div>
+            <div class='container-fluid pt-5 mt-5'>
+                <div class='modalclose position-absolute'></div>
+                <p id="descriptionlanguage" class='col-8 fs-13'></p>
+            </div>
+
+            <label id="fermeturefenetre" class="justify-content-center align-items-center position-absolute fs-8">FERMER AUTOMATIQUEMENT CETTE FENETRE APRÈS 2S<input type="checkbox" checked="checked"><span class="checkmark"></span></label>
+        </div>
+    </section>
+    <div class="modaldelangue justify-content-center align-items-center">
+        <p class=".modaldelanguep text-white"></p>
+        <a href="#"><i id="close" class="fa-solid fa-xmark position-absolute"></i></a>
+    </div>
+   
 
     <script>
         VanillaCounter();
     </script>
+    <script src="assets/js/zoom-by-ironex.min.js"></script>
+    <script>
+        zoom();
+    </script>
     <script src="assets/js/app.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/json/languages.json"></script>
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
 </body>
 
 </html>

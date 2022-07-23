@@ -1,35 +1,90 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 @font-face {
     font-family: 'Gotham';
-    src: url("/assets/font/Gotham-Font/GothamMedium.ttf");
+    src: url("../font/Gotham-Font/GothamMedium.ttf");
 }
 
 * {
     margin: 0;
     padding: 0;
     font-family: 'Gotham', sans-serif;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
+.fs-8 {
+    font-size: 8px;
+}
+.fs-12 {
+    font-size: 12px;
+}
+.fs-13 {
+    font-size: 13px;
+}
+.fs-18 {
+    font-size: 18px;
+}
+.fs-20{
+    font-size: 20px;
+}
+.fs-35 {
+    font-size: 35px;
+}
+.fs-80 {
+    font-size: 80px;
+}
+
 body {
     height: 100vh;
+    background-image: url(../img/Commencement/Chargement.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-#notresponsive{
+#notresponsive {
     display: none !important;
 }
+.transcueil {
+    animation: transcueil 1s 1 alternate !important;
+}
+@keyframes transcueil {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
 /* LOADER */
 #fullloader {
     height: 100vh;
-    background-image: url("/assets/img/Commencement/Chargement.png");
+    background-image: url("../img/Commencement/Chargement.png");
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
     display: flex;
     z-index: 5000000;
 }
+#fullloader img {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.2;
+}
 #fullloader .politiques {
     bottom: 15px;
     right: 10px;
+    font-size: 12px;
 }
-#fullloader .politiques::after,
+.mentions{
+    bottom: 15px;
+    right: 100px;
+    font-size: 12px;
+    z-index: 500000;
+}
 .mentions::after {
     display: block;
     content: '';
@@ -37,17 +92,12 @@ body {
     transform: scaleX(0);
     transition: transform 250ms ease-in-out;
 }
-#fullloader .politiques:hover::after,
 .mentions:hover::after {
     transform: scaleX(1);
 }
-#fullloader .mentions {
-    bottom: 15px;
-    right: 280px;
-}
 #loader {
     color: #000;
-    font-size: 15em;
+    font-size: 10em;
 }
 #loader span {
     animation: animate 8s linear infinite;
@@ -102,11 +152,11 @@ body {
 
 /* Page d'accueil */
 #accueil {
-    background-image: url(/assets/img/Commencement/Chargement.png);
+    background-image: url(../img/Commencement/Chargement.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
-.compteur{
+.compteur {
     color: #0AEFF7;
     font-size: 150px;
     letter-spacing: -11px;
@@ -114,6 +164,10 @@ body {
 #accueil p {
     letter-spacing: 2px;
     line-height: 30px;
+    font-size: 15px;
+}
+#accueil .text {
+    width: 28%;
 }
 #accueil p a {
     color: #FFAAFF;
@@ -136,65 +190,393 @@ body {
 #accueil .politiques {
     bottom: 15px;
     right: 10px;
+    font-size: 12px;
 }
-#accueil .politiques::after,
-.mentions::after {
-    display: block;
-    content: '';
-    border-bottom: solid 3px #fff;
-    transform: scaleX(0);
-    transition: transform 250ms ease-in-out;
+
+/* Jeu */
+#jeu {
+    display: none;
+    height: 100%;
+    font-size: 8px;
+    overflow: hidden;
 }
-#accueil .politiques:hover::after,
-.mentions:hover::after {
-    transform: scaleX(1);
+.regle{
+    bottom: 5px;
+    left: 35%;
+    color: #fff;
+    opacity: 0.5;
 }
-#accueil .mentions {
+#jeu img:nth-child(1) {
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    object-fit: cover;
+}
+#jeu img:nth-child(2) {
+    top: 15px;
+    right: 15px;
+}
+#jeu .politiques {
     bottom: 15px;
-    right: 280px;
+    right: 10px;
+    font-size: 12px;
+}
+.score {
+    top: 35px;
+    left: 34px;
+}
+.score p {
+    transform: rotate(-90deg);
+    height: 15px;
+    color: #0AEFF7;
+    letter-spacing: 2px;
+}
+.score p::after {
+    content: '';
+    width: 36px;
+    position: absolute;
+    top: 15px;
+    left: 0;
+    border-bottom: 1px solid #fff;
+}
+#zoom {
+    bottom: 0;
+    left: 44px;
+}
+.zoomblue {
+    color: #0AEFF7;
+    transform: rotate(-90deg);
+    font-size: 10px;
+}
+.zoombarrewhite {
+    width: 1.5px;
+    height: 124px;
+    background-color: #D9D9D9;
+}
+.zoombarreblue  {
+    width: 1.5px;
+    max-height: 124px;
+    height: 1%;
+    background-color: #0AEFF7;
+    position: absolute;
+    left: 13px;
+    bottom: 42px;
+}
+#langage {
+    width: 163px;
+    height: 24px;
+    bottom: 24px;
+    left: 90px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 8px;
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+#langage:hover {
+    opacity: 0.8;
+}
+#langage img {
+    width: 14px !important;
+    height: 14px !important;
+    color: #fff;
+}
+#langage .loupesvg{
+    z-index: 1 !important;
+}
+.startinggame{
+    position: absolute;
+    bottom: 25%;
+    left: 35%;
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+.none{
+    display: none !important;
+}
+.startinggame{
+    color: #FFAAFF;
+    animation: clignotegame .8s infinite;
+}
+@keyframes clignotegame {
+    0% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+/* Modal + bouton test */
+.modalclose {
+    right: 25%;
+    top: 20%;
+    width: 41.01px;
+    height: 41.01px;
+}
+.modalclose:hover {
+    opacity: 0.8;
+}
+.modalclose:before,
+.modalclose:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: #FFAAFF;
+}
+.modalclose:before {
+    transform: rotate(45deg);
+}
+.modalclose:after {
+    transform: rotate(-45deg);
+}
+#modal {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    top: 0;
+}
+#contenumodal h2 {
+    letter-spacing: 2px;
+    font-size: 80px;
+    text-align: center;
+}
+.modalflex {
+    display: flex !important;
+}
+.lightblue{
+    opacity: 1;
+    color: #0AEFF7;
+}
+#fermeturefenetre {
+    width: auto;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    bottom: 20%;
+    right: 30%;
+    display: flex;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#fermeturefenetre input {
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkmark {
+    height: 14px;
+    width: 14px;
+    background-color: transparent;
+    border: 1px solid #FFAAFF;
+    margin-left: 10px;
+}
+#fermeturefenetre:hover input~.checkmark {
+    background-color: #FFAAFF50;
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: block;
+}
+#fermeturefenetre input:checked~.checkmark:after {
+    display: none;
+}
+#fermeturefenetre .checkmark:after {
+    width: 13px;
+    height: 13px;
+    background-color: #FFAAFF;
+}
+/* Input */
+#inputcenter{
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #00000050;
+    display: none;
+}
+#inputcenter div:nth-child(1){
+    width: 50%;
+    height: 15%;
+    overflow: hidden;
+}
+/* mention legale */
+#mentionlegale{
+    width: 50%;
+    min-height: 100vh;
+    display: none;
+    background: #00000080;
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow: auto !important;
+    z-index: 10000000;
+}
+#mentionlegale div{
+    width: 80%;
+    height: 90vh;
+    overflow-y: scroll !important;
+}
+#mentionlegale h2{
+    font-size: 25px;
+    text-decoration: underline;
+    color: #fff;
+}
+#mentionlegale p{
+    width: 50%;
+    font-size: 14px;
+    color: #fff;
+}
+#mentionlegale p a{
+    color: #FF00D6;
+}
+#mentionlegale ul li{
+    font-size: 14px;
+    color: #fff;
+}
+.openMent{
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.closeMent{
+    display: none;
+}
+#closemention{
+    font-size: 30px;
+    color: #fff;
+    top: 50px;
+    left: 50px;
+    z-index: 1000000;
+}
+/* modal de language trouvée */
+.modaldelangue{
+    width: 40%;
+    height: 100%;
+    background: #00000080;
+    display: none;
+    position: absolute;
+    top: 0;
+}
+.modalflexlang{
+    display: flex;
+    animation: flex 0.5s alternate;
+}
+@keyframes flex {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
+.modalnonelang{
+    display: none !important;  
+}
+#close{
+    font-size: 30px;
+    color: #fff;
+    top: 50px;
+    right: 50px;
+}
+.modalerror{
+    display: flex;
+}
+.modalwin{
+    display: flex;
+}
+.modalerror h2{
+    font-size: 150px;
+    color: #00ffff;
+}
+.modalerror h2 span{
+    font-size: 200px;
+    color: #FF00D6;
+}
+.modalwin h2{
+    font-size: 120px;
+    color: #00ffff;
+}
+.modalwin h2 span{
+    font-size: 150px;
+    color: #FF00D6;
+}
+.modalerror, .modalwin{
+    width: 100%;
+    height: 100%;
+    z-index: 500000;
+    top: 0;
+    display: none;
+    animation: pusherror 0.5s alternate;
+}
+@keyframes pusherror {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
 }
 
-
-
-
-@media screen and (max-width: 1024px) {
-    #notresponsive{
+@media screen and (max-width: 1200px) {
+    #notresponsive {
         height: 100vh;
         display: flex !important;
-        background-image: url("/assets/img/Commencement/Chargement.png");
+        background-image: url("../img/Commencement/Chargement.png");
         background-repeat: no-repeat;
         background-size: cover;
         z-index: 5000000000000;
     }
-    #notresponsive i{
+    #notresponsive i {
         color: #fff;
         font-size: 350px;
         top: 25%;
         right: 25%;
     }
-    #notresponsive p{
+    #notresponsive p {
         color: #fff;
         font-size: 25px;
         bottom: 25%;
         right: 15%;
     }
 }
+
 @media screen and (max-width: 600px) {
-    #notresponsive{
+    #notresponsive {
         height: 100vh;
         display: flex !important;
-        background-image: url("/assets/img/Commencement/Chargement.png");
+        background-image: url("../img/Commencement/Chargement.png");
         background-repeat: no-repeat;
         background-size: cover;
         z-index: 5000000000000;
     }
-    #notresponsive i{
+    #notresponsive i {
         color: #fff;
         font-size: 200px;
         top: 40%;
         right: 20%;
     }
-    #notresponsive p{
+    #notresponsive p {
         color: #fff;
         font-size: 16px;
         bottom: 30%;
