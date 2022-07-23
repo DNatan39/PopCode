@@ -101,7 +101,7 @@ async function openModal(element){
                     let test = data[i].name.toUpperCase();
                     if (element === test) {
                         toShow +=
-                        "<div class='d-flex justify-content-center align-items-center flex-column'><h2 class='fs-80 pb-2'>"+data[i].name+"</h2><img src='"+data[i].picture+"' alt='Logo'></div><div class='container-fluid pt-5 mt-5'><div class='modalclose position-absolute'></div><p class='col-8 fs-13'>"+data[i].description+"</p><label id='fermeturefenetre' class='w-50 justify-content-center align-items-center position-absolute fs-8'>FERMER AUTOMATIQUEMENT CETTE FENETRE APRÈS 2S<input type='checkbox' checked='checked'><span class='checkmark'></span></label></div>"
+                        "<div class='d-flex justify-content-center align-items-center flex-column'><h2 class='fs-80 pb-2'>"+data[i].name+"</h2><img src='"+data[i].picture+"' alt='Logo'></div><div class='container-fluid pt-5 mt-5'><div class='modalclose position-absolute'></div><p class='col-8 fs-13'>"+data[i].description+"</p><label id='fermeturefenetre' class='justify-content-center align-items-center position-absolute fs-8'>FERMER AUTOMATIQUEMENT CETTE FENETRE APRÈS 2S<input type='checkbox' checked='checked'><span class='checkmark'></span></label></div>"
                        
                         document.querySelector('#contenumodal').innerHTML =toShow;
                         var modalclose = document.querySelector('.modalclose');
@@ -109,10 +109,18 @@ async function openModal(element){
                             modal.classList.remove('modalflex');
                         })
                         var fermeturefenetre = document.querySelector('#fermeturefenetre');
-                        fermeturefenetre.addEventListener('click', function(){
-                            modal.classList.remove("modalflex");
-                        })
+                        var input = document.querySelector('#fermeturefenetre input');
+                        var x = new Boolean(true);
+                        if (x == true) {
+                            input.addEventListener('click', function(){
+                                setTimeout(() => {
+                                    modal.classList.remove("modalflex");
+                                }, 2000);
+                            })
+                            console.log(input.value);
+                        }
                         break
+
                     }
                     
                 }

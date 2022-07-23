@@ -354,11 +354,12 @@ body {
     color: #0AEFF7;
 }
 #fermeturefenetre {
+    width: auto;
     position: relative;
     padding-left: 35px;
     margin-bottom: 12px;
-    bottom: 10%;
-    left: 40%;
+    bottom: 20%;
+    right: 30%;
     display: flex;
     cursor: pointer;
     -webkit-user-select: none;
