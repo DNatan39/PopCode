@@ -47,6 +47,7 @@
     </section>
 
     <section id="jeu" class="container-fluid w-100 align-items-center justify-content-center m-0 p-0 text-white position-relative">
+        <h2 class="regle fs-18 position-absolute">Le but du jeu est de trouvé les 27 langages de programmation</h2>
         <div class="zoom">
             <img src="assets/img/Jeu/chambre.jpg" alt="fond du jeu">
         </div>
@@ -91,7 +92,18 @@
     </section>
 
     <section id="modal" class="position-absolute justify-content-center align-items-center text-white p-5">
-        <div id="contenumodal" class="container-fluid d-flex justify-content-center align-items-center p-5 mt-3"></div>
+        <div id="contenumodal" class="container-fluid d-flex justify-content-center align-items-center p-5 mt-3">
+            <div class='d-flex justify-content-center align-items-center flex-column'>
+                <h2 id="titredelanguage" class='fs-80 pb-2'></h2>
+                <img id="imagelanguage" src='' alt=''>
+            </div>
+            <div class='container-fluid pt-5 mt-5'>
+                <div class='modalclose position-absolute'></div>
+                <p id="descriptionlanguage" class='col-8 fs-13'></p>
+            </div>
+
+            <label id="fermeturefenetre" class="justify-content-center align-items-center position-absolute fs-8">FERMER AUTOMATIQUEMENT CETTE FENETRE APRÈS 2S<input type="checkbox" checked="checked"><span class="checkmark"></span></label>
+        </div>
     </section>
     <div class="modaldelangue justify-content-center align-items-center">
         <p class=".modaldelanguep text-white"></p>

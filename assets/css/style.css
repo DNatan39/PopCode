@@ -200,6 +200,12 @@ body {
     font-size: 8px;
     overflow: hidden;
 }
+.regle{
+    bottom: 5px;
+    left: 35%;
+    color: #fff;
+    opacity: 0.5;
+}
 #jeu img:nth-child(1) {
     width: 100vw;
     height: 100vh;
@@ -532,7 +538,7 @@ body {
     
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
     #notresponsive {
         height: 100vh;
         display: flex !important;
