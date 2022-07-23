@@ -1,6 +1,0 @@
-CE QUI ME RESTE A FAIRE !
-
-
-- Finir le JSON.
-- Faire les mentions légales.
-- Faire une page ou écrire en-dessous le but du jeu.
