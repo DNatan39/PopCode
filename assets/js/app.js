@@ -15,11 +15,9 @@ var modaldelanguep = document.querySelector('.modaldelangue p');
 var close = document.querySelector("#close");
 var startinggamewin = document.querySelector("#startinggamewin");
 var startinggameend = document.querySelector("#startinggameend");
-var mentions = document.querySelector(".mentions");
-var mentionlegale = document.querySelector("#mentionlegale");
 let y = 0;
 var mention = {
-    "title" : "Mentions légales", "content" : "<div><a href='#'><i id='closemention' class='fa-solid fa-xmark position-absolute'></i></a><h2>Editeur du Site :</h2><p class='fs-13 text-white'>Le site web <a href='natandavid.fr/projets/popcode'>natandavid.fr/popcode</a>est &eacute;dit&eacute; par les apprenants de l&#39;<a href='https://www.accesscodeschool.fr/' target='_blank'>Access Code School</a> de Lons le Saunier et n&#39;est en aucun cas destin&eacute; &agrave; une utilisation commerciale. Celui-ci &agrave; &eacute;t&eacute; d&eacute;veloppp&eacute; dans le cadre d&#39;un projet d&#39;&eacute;tude.</p><h2>H&eacute;bergement :</h2><p>OVH<br />SAS au capital de 200 000 euros<br />RCS Paris 393 078 647<br />Si&egrave;ge Sociale : 3 cit&eacute; Paradis 75010 Paris</p><h2>Cookies :</h2><p>Notre site internet utilise des cookies. Il s&rsquo;agit de petits fichiers texte enregistr&eacute;s sur votre disque dur. La plupart des cookies sont destin&eacute;s &agrave; permettre ou faciliter votre navigation et sont n&eacute;cessaires au fonctionnement du site. L&rsquo;utilisation de cookies, propres ou tiers, n&rsquo;&eacute;tant pas obligatoirement n&eacute;cessaires au fonctionnement du site n&eacute;cessite un consentement expr&egrave;s de votre part. Vous pouvez manifester votre consentement ou vous opposer &agrave; l&rsquo;utilisation des cookies en param&eacute;trant votre dispositif de connexion de mani&egrave;re appropri&eacute;e. Reportez-vous pour cela notamment au guide d&rsquo;utilisation de votre navigateur.</p><h2>Comment accepter, param&eacute;trer ou refuser un cookie ?</h2><p>Vous pouvez configurer votre navigateur de fa&ccedil;on &agrave; ce que les cookies soient enregistr&eacute;s ou rejet&eacute;s.</p><h2>Pour Microsoft Internet Explorer :</h2><ul><li>Choisissez le menu &nbsp;<strong>Outils</strong> &nbsp;puis &nbsp;<strong>Options Internet&nbsp;</strong></li><li>Cliquez sur l&rsquo;onglet &laquo; Confidentialit&eacute; &raquo;</li><li>S&eacute;lectionnez le niveau souhait&eacute; &agrave; l&rsquo;aide du curseur</li></ul><h2>Pour Mozilla Firefox :</h2><ul><li>Choisissez le menu <strong>Outils&nbsp;</strong>puis&nbsp;<strong>Options</strong></li><li>Cliquez sur l&rsquo;option <strong>Vie priv&eacute;e</strong></li></ul><h2>Pour Chrome :</h2><ul><li>Choisissez le menu <strong>Edition</strong> puis&nbsp;<strong>Pr&eacute;f&eacute;rences</strong>&nbsp;</li><li>Cliquez sur l&rsquo;option <strong>Donn&eacute;es personnelles</strong></li><li>Rubrique <strong>Cookies</strong>&nbsp;</li></ul><h2>Pour Safari :</h2><ul><li>Choisissez le menu <strong>Edition</strong> puis&nbsp;<strong>Pr&eacute;f&eacute;rences</strong>&nbsp;</li><li>Cliquez sur l&rsquo;option <strong>Donn&eacute;es personnelles</strong></li><li>Rubrique <strong>Cookies</strong>&nbsp;</li></ul><h2>Protection des donn&eacute;es personnelles :</h2><p>Aucune information personnelle n&rsquo;est collect&eacute;e &agrave; votre insu.<br />Aucune information personnelle n&rsquo;est c&eacute;d&eacute;e &agrave; des tiers.</p></div>"
+    "title" : "Mentions légales", "content" : "<div><h2>Editeur du Site :</h2><p class='fs-13 text-white'>Le site web <a href='natandavid.fr/projets/popcode'>natandavid.fr/popcode</a>est &eacute;dit&eacute; par les apprenants de l&#39;<a href='https://www.accesscodeschool.fr/' target='_blank'>Access Code School</a> de Lons le Saunier et n&#39;est en aucun cas destin&eacute; &agrave; une utilisation commerciale. Celui-ci &agrave; &eacute;t&eacute; d&eacute;veloppp&eacute; dans le cadre d&#39;un projet d&#39;&eacute;tude.</p><h2>H&eacute;bergement :</h2><p>OVH<br />SAS au capital de 200 000 euros<br />RCS Paris 393 078 647<br />Si&egrave;ge Sociale : 3 cit&eacute; Paradis 75010 Paris</p><h2>Cookies :</h2><p>Notre site internet utilise des cookies. Il s&rsquo;agit de petits fichiers texte enregistr&eacute;s sur votre disque dur. La plupart des cookies sont destin&eacute;s &agrave; permettre ou faciliter votre navigation et sont n&eacute;cessaires au fonctionnement du site. L&rsquo;utilisation de cookies, propres ou tiers, n&rsquo;&eacute;tant pas obligatoirement n&eacute;cessaires au fonctionnement du site n&eacute;cessite un consentement expr&egrave;s de votre part. Vous pouvez manifester votre consentement ou vous opposer &agrave; l&rsquo;utilisation des cookies en param&eacute;trant votre dispositif de connexion de mani&egrave;re appropri&eacute;e. Reportez-vous pour cela notamment au guide d&rsquo;utilisation de votre navigateur.</p><h2>Comment accepter, param&eacute;trer ou refuser un cookie ?</h2><p>Vous pouvez configurer votre navigateur de fa&ccedil;on &agrave; ce que les cookies soient enregistr&eacute;s ou rejet&eacute;s.</p><h2>Pour Microsoft Internet Explorer :</h2><ul><li>Choisissez le menu &nbsp;<strong>Outils</strong> &nbsp;puis &nbsp;<strong>Options Internet&nbsp;</strong></li><li>Cliquez sur l&rsquo;onglet &laquo; Confidentialit&eacute; &raquo;</li><li>S&eacute;lectionnez le niveau souhait&eacute; &agrave; l&rsquo;aide du curseur</li></ul><h2>Pour Mozilla Firefox :</h2><ul><li>Choisissez le menu <strong>Outils&nbsp;</strong>puis&nbsp;<strong>Options</strong></li><li>Cliquez sur l&rsquo;option <strong>Vie priv&eacute;e</strong></li></ul><h2>Pour Chrome :</h2><ul><li>Choisissez le menu <strong>Edition</strong> puis&nbsp;<strong>Pr&eacute;f&eacute;rences</strong>&nbsp;</li><li>Cliquez sur l&rsquo;option <strong>Donn&eacute;es personnelles</strong></li><li>Rubrique <strong>Cookies</strong>&nbsp;</li></ul><h2>Pour Safari :</h2><ul><li>Choisissez le menu <strong>Edition</strong> puis&nbsp;<strong>Pr&eacute;f&eacute;rences</strong>&nbsp;</li><li>Cliquez sur l&rsquo;option <strong>Donn&eacute;es personnelles</strong></li><li>Rubrique <strong>Cookies</strong>&nbsp;</li></ul><h2>Protection des donn&eacute;es personnelles :</h2><p>Aucune information personnelle n&rsquo;est collect&eacute;e &agrave; votre insu.<br />Aucune information personnelle n&rsquo;est c&eacute;d&eacute;e &agrave; des tiers.</p></div>"
 }
 
 
@@ -48,25 +46,21 @@ zoom.addEventListener('wheel', function(){
 
 
 // mentions légales
+var mentions = document.querySelector(".mentions");
+var mentionlegale = document.querySelector("#mentionlegale");
 mentions.addEventListener('click', function (){
     mentionlegale.classList.add("openMent");
 })
+
+let toMention = "";
+toMention += "<a href='#'><i id='closemention' class='fa-solid fa-xmark position-absolute'></i></a><h2>"+mention.title+"</h2><p>"+mention.content+"</p>";
+mentionlegale.innerHTML =toMention;
 var closemention = document.querySelector("#closemention");
 closemention.addEventListener('click', function (){
     mentionlegale.classList.add("closeMent");
     mentionlegale.classList.remove("openMent");
 })
-let toMention = "";
-toMention += "<h2>"+mention.title+"</h2><p>"+mention.content+"</p>";
-mentionlegale.innerHTML =toMention;
 
-
-// Modal
-fermeturefenetre.addEventListener('click', function(){
-    setTimeout(() => {
-        modal.classList.remove("modalflex");
-    }, 2000);
-})
 
 
 
@@ -107,7 +101,7 @@ async function openModal(element){
                     let test = data[i].name.toUpperCase();
                     if (element === test) {
                         toShow +=
-                        "<div class='d-flex justify-content-center align-items-center flex-column'><h2 class='fs-80 pb-2'>"+data[i].name+"</h2><img src='"+data[i].picture+"' alt='Logo'></div><div class='container-fluid pt-5 mt-5'><div class='modalclose position-absolute'></div><p class='col-8 fs-13'>"+data[i].description+"</p> <label id='fermeturefenetre' class='w-50 justify-content-center align-items-center position-absolute fs-8'>FERMER AUTOMATIQUEMENT CETTE FENETRE APRÈS 2S<input type='checkbox' checked='checked'><span class='checkmark'></span></label></div>"
+                        "<div class='d-flex justify-content-center align-items-center flex-column'><h2 class='fs-80 pb-2'>"+data[i].name+"</h2><img src='"+data[i].picture+"' alt='Logo'></div><div class='container-fluid pt-5 mt-5'><div class='modalclose position-absolute'></div><p class='col-8 fs-13'>"+data[i].description+"</p><label id='fermeturefenetre' class='w-50 justify-content-center align-items-center position-absolute fs-8'>FERMER AUTOMATIQUEMENT CETTE FENETRE APRÈS 2S<input type='checkbox' checked='checked'><span class='checkmark'></span></label></div>"
                        
                         document.querySelector('#contenumodal').innerHTML =toShow;
                         var modalclose = document.querySelector('.modalclose');

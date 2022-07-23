@@ -79,12 +79,12 @@ body {
     right: 10px;
     font-size: 12px;
 }
-#fullloader .mentions {
+.mentions{
     bottom: 15px;
     right: 100px;
     font-size: 12px;
+    z-index: 500000;
 }
-#fullloader .politiques::after,
 .mentions::after {
     display: block;
     content: '';
@@ -92,7 +92,6 @@ body {
     transform: scaleX(0);
     transition: transform 250ms ease-in-out;
 }
-#fullloader .politiques:hover::after,
 .mentions:hover::after {
     transform: scaleX(1);
 }
@@ -193,23 +192,6 @@ body {
     right: 10px;
     font-size: 12px;
 }
-#accueil .mentions {
-    bottom: 15px;
-    right: 100px;
-    font-size: 12px;
-}
-#accueil .politiques::after,
-.mentions::after {
-    display: block;
-    content: '';
-    border-bottom: solid 3px #fff;
-    transform: scaleX(0);
-    transition: transform 250ms ease-in-out;
-}
-#accueil .politiques:hover::after,
-.mentions:hover::after {
-    transform: scaleX(1);
-}
 
 /* Jeu */
 #jeu {
@@ -232,23 +214,6 @@ body {
     bottom: 15px;
     right: 10px;
     font-size: 12px;
-}
-#jeu .mentions {
-    bottom: 15px;
-    right: 100px;
-    font-size: 12px;
-}
-#jeu .politiques::after,
-.mentions::after {
-    display: block;
-    content: '';
-    border-bottom: solid 3px #fff;
-    transform: scaleX(0);
-    transition: transform 250ms ease-in-out;
-}
-#jeu .politiques:hover::after,
-.mentions:hover::after {
-    transform: scaleX(1);
 }
 .score {
     top: 35px;
