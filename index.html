@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" type="image/png" href="assets/img/Logo/logo-popcode2.svg"/>
+    <link rel="icon" type="image/svg" href="assets/img/Logo/logo-popcode2.svg"/>
     <title>PopCode</title>
 </head>
 
@@ -47,11 +47,21 @@
     </section>
 
     <section id="jeu" class="container-fluid w-100 align-items-center justify-content-center m-0 p-0 text-white position-relative">
-        <h2 class="regle fs-18 position-absolute">Le but du jeu est de trouvé les 27 langages de programmation</h2>
+        <div class="regleoverlay"></div>
+        <div class="regle justify-content-center align-items-strat flex-column fs-18 position-absolute">
+            <i id="fermregle" class="fa-solid fa-xmark position-absolute"></i>
+            <h2 class="text-center">Le but du jeu est de trouvé les 27 langages de programmation</h2><br>
+            <ul>
+                <li>Vous devez trouver les types de langages d'informatique de programmation en appuyant sur le clavier et en tapant le nom du langage.</li><br>
+                <li>Pour valider votre réponse, il faut uniquement taper sur "Entrer".</li><br>
+                <li>Attention vous avez trois chance, sinon vous avez perdu.</li><br>
+                <li>Bonne chance à vous !</li>
+            </ul>
+        </div>
         <div class="zoom">
             <img src="assets/img/Jeu/chambre.jpg" alt="fond du jeu">
         </div>
-        <img src="assets/img/Jeu/Logo.svg" alt="Logo" class="position-absolute">
+        <img src="assets/img/Jeu/Logo.svg" alt="Logo" class="logodanslejeu position-absolute">
         <div class="score m-0 p-0 position-absolute d-flex justify-content-center align-items-center">
             <p class="pe-3">SCORE</p>
             <div class="d-flex justify-content-center align-items-center flex-column">
@@ -107,7 +117,7 @@
     </section>
     <div class="modaldelangue justify-content-center align-items-center">
         <p class=".modaldelanguep text-white"></p>
-        <a href="#"><i id="close" class="fa-solid fa-xmark position-absolute"></i></a>
+        <i id="close" class="fa-solid fa-xmark position-absolute"></i>
     </div>
    
 
